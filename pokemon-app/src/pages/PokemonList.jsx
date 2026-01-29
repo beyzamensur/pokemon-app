@@ -8,14 +8,14 @@ function PokemonList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // API'den ilk 151 Pokémon'u çekiyoruz
+    
     getPokemonList().then((data) => {
       setPokemons(data);
       setLoading(false);
     });
   }, []);
 
-  // Arama filtresi: Küçük/büyük harf duyarsız
+  
   const filteredPokemons = pokemons.filter(p => 
     p.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -29,10 +29,10 @@ function PokemonList() {
   }
 
   return (
-    /* Ana div: Sayfayı ortalayan .container sınıfını kullanır */
+    
     <div className="container">
       
-      {/* Üst Kısım: Logo ve Başlık */}
+      {}
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" 
@@ -43,7 +43,7 @@ function PokemonList() {
         <p style={{ margin: '5px 0', color: '#666' }}>151 pokémon</p>
       </div>
 
-      {/* Arama Kutusu */}
+      {}
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
         <input 
           type="text" 
@@ -53,7 +53,7 @@ function PokemonList() {
         />
       </div>
 
-      {/* 3'lü Izgara (Grid) div'i */}
+      {}
       <div className="pokemon-grid">
         {filteredPokemons.map((pokemon) => (
           <Link 
@@ -61,12 +61,12 @@ function PokemonList() {
             key={pokemon.name} 
             className="pokemon-card"
           >
-            {/* Hareketli GIF Görseli */}
+            {}
            <img 
                     src={getPokemonImageUrl(pokemon.name)} 
                     alt={pokemon.name} 
                     style={{ width: '100px', height: '100px', objectFit: 'contain' }}
-            // onError kısmını geçici olarak sil kanka, bakalım asıl hata neymiş
+            
             />
             <p style={{ marginTop: '15px', fontWeight: 'bold', textTransform: 'capitalize' }}>
               {pokemon.name}
