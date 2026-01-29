@@ -1,4 +1,4 @@
-/* Tüm sayfa için temel sıfırlama */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,52 +10,52 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Ana taşıyıcıyı tam ortalar */
+
 .container {
-  max-width: 1000px; /* Genişliği kısıtla */
-  margin: 0 auto;    /* Sağından ve solundan otomatik boşluk vererek ortala */
+  max-width: 1000px; 
+  margin: 0 auto;    
   padding: 50px 20px;
   text-align: center;
 }
 
-/* 3'lü Izgara Sistemi */
+
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Yan yana tam 3 eşit parça */
-  gap: 30px; /* Kutular arası boşluk */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; 
   margin-top: 40px;
-  justify-items: center; /* İçerideki öğeleri merkeze hizala */
+  justify-items: center; 
 }
 
-/* Kart Tasarımı */
+
 .pokemon-card {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   padding: 40px 20px;
-  width: 100%; /* Grid hücresini kapla */
+  width: 100%; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none; /* Link alt çizgisini kaldır */
+  text-decoration: none; 
   color: #333;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* HOVER EFEKTİ: Üstüne gelince gri arka plan */
+
 .pokemon-card:hover {
-  background-color: #eeeeee !important; /* İstediğin gri renk */
-  transform: translateY(-5px); /* Hafif yukarı kayma */
+  background-color: #eeeeee !important; 
+  transform: translateY(-5px); 
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
   cursor: pointer;
 }
 
-/* Mobilde (Telefonlarda) Tasarım */
+
 @media (max-width: 768px) {
   .pokemon-grid {
-    grid-template-columns: 1fr; /* Mobilde tek sıra yap */
+    grid-template-columns: 1fr; 
     max-width: 350px;
-    margin: 40px auto 0 auto; /* Mobilde de ortalı kalsın */
+    margin: 40px auto 0 auto; 
   }
 }
