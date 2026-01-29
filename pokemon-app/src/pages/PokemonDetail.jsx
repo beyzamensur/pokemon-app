@@ -3,20 +3,20 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getPokemonDetail, getPokemonImageUrl } from '../services/api';
 
 function PokemonDetail() {
-  const { name } = useParams(); // URL'deki pokémon ismini yakalar
-  const navigate = useNavigate(); // Geri dönmek için kullanılır
+  const { name } = useParams(); 
+  const navigate = useNavigate(); 
   const [pokemon, setPokemon] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // API'den detay verilerini çekiyoruz
+    
     getPokemonDetail(name).then((data) => {
       setPokemon(data);
       setLoading(false);
     });
   }, [name]);
 
-  // Yükleme ekranı (Bonus Indicator)
+  
   if (loading) {
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -31,10 +31,10 @@ function PokemonDetail() {
       justifyContent: 'center', 
       alignItems: 'center', 
       minHeight: '100vh', 
-      backgroundColor: '#f5f5f5', // Arka plan hafif gri
+      backgroundColor: '#f5f5f5', 
       padding: '20px' 
     }}>
-      {/* Bilgilerin yazacağı beyaz kutu */}
+      {}
       <div className="detail-card" style={{ 
         backgroundColor: 'white', 
         padding: '40px', 
@@ -45,9 +45,9 @@ function PokemonDetail() {
         position: 'relative',
         textAlign: 'center'
       }}>
-        {/* Sağ üstteki X Kapat Butonu */}
+        {}
         <button 
-          onClick={() => navigate('/pokemon')} // Kullanıcıyı listeye geri gönderir
+          onClick={() => navigate('/pokemon')} 
           style={{ 
             position: 'absolute', 
             top: '15px', 
@@ -62,7 +62,7 @@ function PokemonDetail() {
           &times;
         </button>
 
-        {/* Hareketli Pokémon Görseli */}
+        {}
         <img 
           src={getPokemonImageUrl(pokemon.name)} 
           alt={pokemon.name} 
