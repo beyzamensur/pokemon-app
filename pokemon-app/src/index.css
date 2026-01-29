@@ -1,0 +1,9 @@
+:root {
+  background-color: #ffffff; /* Arka plan bembeyaz olsun */
+  color: #333333; /* Yazılar koyu gri olsun */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
